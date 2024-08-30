@@ -1,7 +1,7 @@
 <template>
     <header class="app-header">
       <!-- Top Bar -->
-      <div class="top-bar bg-dark text-light py-2">
+      <div class="top-bar bg-dark text-light py-2 border-bottom border-dark-subtle">
         <div class="container d-flex justify-content-between">
           <div>
             <a href="#" class="text-light me-3">Wishlist(0)</a>
@@ -28,25 +28,8 @@
   
           <!-- Navbar Links -->
           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Media</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ShortCode</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <AppMenuHead v-for="(link, index) in arrays.navLinks" :key="index" :link="link"/>
             </ul>
           </div>
           <div class="d-flex">
@@ -58,7 +41,7 @@
             </a>
             <a href="#" class="text-light">
               <i class="bi bi-bag"></i>
-              <span class="ms-1">(0) £0.00</span>
+              <span class="ms-1 text-orange">(0) £0.00</span>
             </a>
           </div>
         </div>
@@ -67,8 +50,19 @@
   </template>
   
   <script>
+  import { arrays } from "../arrey"
+  import AppMenuHead from "./AppMenuHead.vue";
+
   export default {
     name: "AppHeader",
+    data() {
+      return {
+        arrays
+      }
+    },
+    components: {
+      AppMenuHead
+    }
   };
   </script>
   
@@ -93,6 +87,10 @@
   
   .bi {
     font-size: 1.2rem;
+  }
+
+  .text-orange {
+    color: #ffaa00;
   }
   </style>
   
