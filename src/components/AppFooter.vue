@@ -40,7 +40,7 @@
             <ul class="list-unstyled">
               <li><a href="#" class="text-light text-decoration-none">Delivery</a></li>
               <li><a href="#" class="text-light text-decoration-none">Cart</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Terms & Conditions</a></li>
+              <li><a href="#" class="text-light text-decoration-none">Terms &amp; Conditions</a></li>
               <li><a href="#" class="text-light text-decoration-none">My Account</a></li>
               <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
             </ul>
