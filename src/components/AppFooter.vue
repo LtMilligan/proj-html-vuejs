@@ -1,5 +1,5 @@
 <template>
-    <footer class="app-footer bg-dark text-light py-5">
+    <footer class="app-footer text-light py-5">
       <div class="container">
         <div class="row">
           <!-- Address Info -->
@@ -68,7 +68,7 @@
         </div>
       </div>
       <!-- Bottom Footer -->
-      <div class="bg-darker text-center py-3">
+      <div class="text-center py-3">
         <div class="container d-flex justify-content-between align-items-center">
           <p class="mb-0">&copy; 2023 Codezeel</p>
           <!-- Payment Icons -->
@@ -92,7 +92,7 @@
   
   <style scoped>
   .app-footer {
-    background-image: url('/path-to-your-background-image.jpg');
+    background-image: url('../assets/footer-bg.png');
     background-size: cover;
     background-position: center;
   }

@@ -10,7 +10,7 @@
       </section>
   
       <!-- Features Section -->
-      <section class="features-section bg-dark text-light py-4">
+      <section class="features-section text-light py-4">
         <div class="container d-flex justify-content-around text-center">
           <div>
             <i class="bi bi-truck display-4"></i>
@@ -34,24 +34,33 @@
       <!-- Special Category Section -->
       <section class="special-category py-5">
         <div class="container">
-          <h2 class="text-center mb-5">Special Category</h2>
+          <h2 class="text-center text-light mb-5">Special Category</h2>
           <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="category-card bg-dark text-light p-3">
+              <div class="category-card text-light position-relative">
                 <img src="../assets/category-image-01-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 1">
-                <h4>Batman</h4>
+                <div class="position-absolute absolute-text">
+                  <h4>Batman</h4>
+                  <a href="#" class="text-y-path">Shop now</a>
+                </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="category-card bg-dark text-light p-3">
+              <div class="category-card text-light position-relative">
                 <img src="../assets/category-image-02-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 2">
-                <h4>Bayonetta</h4>
+                <div class="position-absolute absolute-text">
+                  <h4>Bayonetta</h4>
+                  <a href="#" class="text-y-path">Shop now</a>
+                </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-              <div class="category-card bg-dark text-light p-3">
+              <div class="category-card text-light position-relative">
                 <img src="../assets/category-image-03-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 3">
-                <h4>Dark Souls</h4>
+                <div class="position-absolute absolute-text">
+                  <h4>Dark Solus</h4>
+                  <a href="#" class="text-y-path">Shop now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -59,27 +68,32 @@
       </section>
   
       <!-- Our Products Section -->
-      <section class="our-products bg-dark text-light py-5">
+      <section class="our-products text-light py-5">
         <div class="container">
           <h2 class="text-center mb-5">Our Products</h2>
-          <ul class="nav nav-pills justify-content-center mb-4">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Featured</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">New Arrival</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Best Sellers</a>
-            </li>
-          </ul>
+          <div class="row justify-content-center mb-5">
+            <div class="col-1 p-2 border border-end-0 text-center">
+              <a class="text-over">Featured</a>
+            </div>
+            <div class="col-1 p-2 border text-center">
+              <a class="text-over">New Arrival</a>
+            </div>
+            <div class="col-1 p-2 border border-start-0 text-center">
+              <a class="text-over">Best sellers</a>
+            </div>
+          </div>
           <div class="row">
             <div class="col-lg-3 col-md-4 mb-4" v-for="product in products" :key="product.id">
-              <div class="product-card bg-light text-dark p-3">
+              <div class="product-card bg-cards text-light">
                 <img :src="product.image" class="img-fluid mb-3" :alt="product.name">
-                <h5>{{ product.name }}</h5>
-                <p v-if="product.sale_price===null">&pound; {{ product.full_price }}</p>
-                <p v-else><del>&pound; {{ product.full_price }}</del> &pound; {{ product.sale_price }}</p>
+                <div class="text-cards">
+                  <div class="product-rating mb-2">
+                    <i v-for="n in 5" :key="n" class="bi" :class="n <= product.rating ? 'bi-star-fill text-warning' : 'bi-star-fill text-secondary'"></i>
+                  </div>
+                  <h5>{{ product.name }}</h5>
+                  <p v-if="product.sale_price===null" class="text-y-path">&pound; {{ product.full_price }}</p>
+                  <p v-else class="text-y-path"><del>&pound; {{ product.full_price }}</del> &pound; {{ product.sale_price }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -88,28 +102,33 @@
   
       <!-- Deal of the Day Section -->
       <section class="deal-of-the-day py-5">
-        <div class="container text-center">
+        <div class="container text-center text-light">
           <h2 class="mb-4">Deal Of The Day</h2>
-          <div class="countdown-timer mb-5 text-light">
-            <div class="d-inline-block text-center me-4">
-              <span class="d-block border border-secondary p-2">1026 days</span>
+          <div class="row justify-content-center mb-5">
+            <div class="col-1 p-2 border border-end-0 text-center">
+              <span>1026 days</span>
             </div>
-            <div class="d-inline-block text-center me-4">
-              <span class="d-block border border-secondary p-2">13 hours</span>
+            <div class="col-1 p-2 border text-center">
+              <span>13 hours</span>
             </div>
-            <div class="d-inline-block text-center me-4">
-              <span class="d-block border border-secondary p-2">24 mins</span>
+            <div class="col-1 p-2 border border-start-0 text-center">
+              <span>24 mins</span>
             </div>
-            <div class="d-inline-block text-center">
-              <span class="d-block border border-secondary p-2">17 secs</span>
+            <div class="col-1 p-2 border border-start-0 text-center">
+              <span>17 secs</span>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-4 mb-4" v-for="deal in deals" :key="deal.id">
-              <div class="deal-card bg-light text-dark p-3">
+              <div class="deal-card bg-cards text-light">
                 <img :src="deal.image" class="img-fluid mb-3" :alt="deal.name">
-                <h5>{{ deal.name }}</h5>
-                <p>{{ deal.price }}</p>
+                <div class="text-cards">
+                  <div class="deal-rating mb-2">
+                    <i v-for="n in 5" :key="n" class="bi" :class="n <= deal.rating ? 'bi-star-fill text-warning' : 'bi-star-fill text-secondary'"></i>
+                  </div>
+                  <h5>{{ deal.name }}</h5>
+                  <p class="text-y-path">&pound; {{ deal.price }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -117,7 +136,7 @@
       </section>
   
       <!-- Testimonial Section -->
-      <section class="testimonial-section bg-dark text-light py-5">
+      <section class="testimonial-section text-light py-5">
         <div class="container text-center">
           <blockquote class="blockquote">
             <p class="mb-4">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words."</p>
@@ -131,10 +150,10 @@
       <!-- New Game Blogs Section -->
       <section class="new-game-blogs py-5">
         <div class="container">
-          <h2 class="text-center mb-5">New Game Blogs</h2>
+          <h2 class="text-center text-light mb-5">New Game Blogs</h2>
           <div class="row">
             <div class="col-lg-4 col-md-6 mb-4" v-for="blog in blogs" :key="blog.id">
-              <div class="blog-card bg-dark text-light p-3">
+              <div class="blog-card text-light">
                 <img :src="blog.image" class="img-fluid mb-3" :alt="blog.title">
                 <!-- AGGIUNGERE AL CICLO LA DATA DI PUBBLICAZIONE ED IL NUMERO DI COMMENTI -->
                 <h5>{{ blog.title }}</h5>
@@ -145,7 +164,7 @@
       </section>
   
       <!-- Brands Section -->
-      <section class="brands-section bg-dark text-light py-4">
+      <section class="brands-section text-light py-4">
         <div class="container text-center">
           <div class="d-flex justify-content-around">
             <img src="../assets/brand-01.png" alt="Brand 1" height="40">
@@ -165,16 +184,16 @@
     data() {
       return {
         products: [
-          { id: 1, name: "Shopping Mahjong connect", image: "/src/assets/04.jpg", full_price: "180", sale_price: "100"},
-          { id: 2, name: "BangBangShooting", image: "/src/assets/09.jpg", full_price: "83 - 90", sale_price: null},
-          { id: 3, name: "Taishou x Alice Epilogue", image: "/src/assets/03.jpg", full_price: "150", sale_price: null},
-          { id: 4, name: "Labyrinths of the World", image: "/src/assets/11.jpg", full_price: "100", sale_price: null}
+          { id: 1, name: "Shopping Mahjong connect", image: "/src/assets/04.jpg", full_price: "180", sale_price: "100", rating: 4},
+          { id: 2, name: "BangBangShooting", image: "/src/assets/09.jpg", full_price: "83 - 90", sale_price: null, rating: 0},
+          { id: 3, name: "Taishou x Alice Epilogue", image: "/src/assets/03.jpg", full_price: "150", sale_price: null, rating: 0},
+          { id: 4, name: "Labyrinths of the World", image: "/src/assets/11.jpg", full_price: "100", sale_price: null, rating: 2}
         ],
         deals: [
-            { id: 1, name: "Shopping Mahjong connect", image: "/src/assets/04.jpg", price: "100"},
-          { id: 2, name: "BangBangShooting", image: "/src/assets/18.jpg", price: "56"},
-          { id: 3, name: "Buddy and Lucky Solitaire", image: "/src/assets/02.jpg", price: "150"},
-          { id: 4, name: "Taishou x Alice Epilogue", image: "/src/assets/10.jpg", price: "160"}  
+            { id: 1, name: "Shopping Mahjong connect", image: "/src/assets/04.jpg", price: "100", rating: 4},
+          { id: 2, name: "BangBangShooting", image: "/src/assets/18.jpg", price: "56", rating: 0},
+          { id: 3, name: "Buddy and Lucky Solitaire", image: "/src/assets/02.jpg", price: "150", rating: 0},
+          { id: 4, name: "Taishou x Alice Epilogue", image: "/src/assets/10.jpg", price: "160", rating: 0}  
         ],
         blogs: [
           { id: 1, title: "Anyway REPS is a NYC agency repres enting photographers", image: "/src/assets/Nisi-ut-aliquid-ex-ea-com-1400x878_t.jpg" },
@@ -201,13 +220,16 @@
   }
   
   .category-card {
-    text-align: center;
     border-radius: 8px;
   }
   
   .product-card, .deal-card, .blog-card {
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
+  }
+
+  .text-cards {
+    padding-left: 5px;
   }
   
   .countdown-timer div {
@@ -231,6 +253,34 @@
 
   button:hover {
     background-color: #f9aa01;
+  }
+
+  .text-y-path {
+    color: #f9aa01;
+  }
+
+  .absolute-text {
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+  }
+
+  .text-over:hover {
+    color: #f9aa01;
+  }
+
+  .bg-cards {
+    background-color: #170E1F;
+  }
+
+  .app-main {
+    background-image: url("../assets/body-bg.jpg");
+  }
+
+  .testimonial-section {
+    background-image: url("../assets/parallax.jpg");
+    background-position: center;
   }
   </style>
   
