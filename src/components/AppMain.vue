@@ -3,30 +3,78 @@
       <!-- Hero Section -->
       <section class="hero-section text-light py-5">
         <div class="container text-left">
-          <h2 class="display-5">Upcoming Stock</h2>
-          <h1 class="display-2 fw-bold">Resident Evil 3 <br> Remake</h1>
-          <button class="btn btn-light btn-lg rounded-0 mt-3" style=":hover ">Shop Now</button>
+          <div class="bg-trapezio">
+            <h2 class="display-5 fw-bold">Upcoming Stock</h2>
+          </div>
+          <h1 class="display-2 fw-bold mb-5">Resident Evil 3 <br> Remake</h1>
+          <button class="btn btn-light btn-lg rounded-0 mt-3">Shop Now</button>
         </div>
       </section>
   
       <!-- Features Section -->
-      <section class="features-section text-light py-4">
+      <section class="features-section text-light py-4 mt-5">
         <div class="container d-flex justify-content-around text-center">
           <div>
-            <i class="bi bi-truck display-4"></i>
-            <p class="mt-2">Free Delivery</p>
+            <div class="d-inline-block">
+              <i class="bi bi-truck display-4"></i>
+            </div>
+            <div class="d-inline-block text-start ms-4">
+              <p class="fw-bold p-0 m-0">Free Delivery</p>
+              <p>Free Shipping On All Order</p>
+            </div>
           </div>
           <div>
-            <i class="bi bi-coin display-4"></i>
-            <p class="mt-2">Money Return</p>
+            <div class="d-inline-block">
+              <i class="bi bi-coin display-4"></i>
+            </div>
+            <div class="d-inline-block text-start ms-4">
+              <p class="fw-bold p-0 m-0">Money Return</p>
+              <p>Back Guarantee in 7 days</p>
+            </div>
           </div>
           <div>
-            <i class="bi bi-percent display-4"></i>
-            <p class="mt-2">Member Discount</p>
+            <div class="d-inline-block">
+              <i class="bi bi-percent display-4"></i>
+            </div>
+            <div class="d-inline-block text-start ms-4">
+              <p class="fw-bold p-0 m-0">Member Discount</p>
+              <p>On every order over $130.00</p>
+            </div>
           </div>
           <div>
-            <i class="bi bi-arrow-counterclockwise display-4"></i>
-            <p class="mt-2">Return Policy</p>
+            <div class="d-inline-block">
+              <i class="bi bi-arrow-counterclockwise display-4"></i>
+            </div>
+            <div class="d-inline-block text-start ms-4">
+              <p class="fw-bold p-0 m-0">Return Policy</p>
+              <p>Support 24 hours a day</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Double Game Section -->
+      <section class="double-game py-5">
+        <div class="container">
+          <div class="row d-flex justify-content-between">
+            <div class="col-6 position-relative">
+              <img src="../assets/cms-banner-01.jpg" alt="Banner-01" width="100%">
+              <div class="position-absolute absolute-double">
+                <div class="bg-trapezio-double mb-4">
+                  <h3 class="fw-bold fst-italic">Most Popular</h3>
+                </div>
+                <h2 class="fw-bold text-light">The Battlefield 4<br>Naval Strike</h2>
+              </div>
+            </div>
+            <div class="col-6 position-relative">
+              <img src="../assets/cms-banner-02.jpg" alt="Banner-02" width="100%">
+              <div class="position-absolute absolute-double">
+                <div class="bg-trapezio-double mb-4">
+                  <h3 class="fw-bold fst-italic">Latest Game</h3>
+                </div>
+                <h2 class="fw-bold text-light">Assassin's Creed<br>Unity Game</h2>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -38,19 +86,25 @@
           <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="category-card text-light position-relative">
-                <img src="../assets/category-image-01-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 1">
+                <img src="../assets/category-image-02-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 1">
                 <div class="position-absolute absolute-text">
                   <h4>Batman</h4>
                   <a href="#" class="text-y-path">Shop now</a>
+                </div>
+                <div class="position-absolute absolute-button">
+                  <button class="btn" type="button">Batman</button>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="category-card text-light position-relative">
-                <img src="../assets/category-image-02-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 2">
+                <img src="../assets/category-image-01-446x550_t.jpg" class="img-fluid mb-3" alt="Category Image 2">
                 <div class="position-absolute absolute-text">
                   <h4>Bayonetta</h4>
                   <a href="#" class="text-y-path">Shop now</a>
+                </div>
+                <div class="position-absolute absolute-button">
+                  <button class="btn" type="button">Bayonetta</button>
                 </div>
               </div>
             </div>
@@ -60,6 +114,9 @@
                 <div class="position-absolute absolute-text">
                   <h4>Dark Solus</h4>
                   <a href="#" class="text-y-path">Shop now</a>
+                </div>
+                <div class="position-absolute absolute-button">
+                  <button class="btn" type="button">Dark Souls</button>
                 </div>
               </div>
             </div>
@@ -72,14 +129,14 @@
         <div class="container">
           <h2 class="text-center mb-5">Our Products</h2>
           <div class="row justify-content-center mb-5">
-            <div class="col-1 p-2 border border-end-0 text-center">
-              <a class="text-over">Featured</a>
+            <div class="col-2 p-2 border border-end-0 text-center">
+              <a class="text-decoration-none text-over">Featured</a>
             </div>
-            <div class="col-1 p-2 border text-center">
-              <a class="text-over">New Arrival</a>
+            <div class="col-2 p-2 border text-center">
+              <a class="text-decoration-none text-over">New Arrival</a>
             </div>
-            <div class="col-1 p-2 border border-start-0 text-center">
-              <a class="text-over">Best sellers</a>
+            <div class="col-2 p-2 border border-start-0 text-center">
+              <a class="text-decoration-none text-over">Best sellers</a>
             </div>
           </div>
           <div class="row">
@@ -100,6 +157,32 @@
         </div>
       </section>
   
+      <!-- Double Game Section -->
+      <section class="double-game py-5">
+        <div class="container">
+          <div class="row d-flex justify-content-between">
+            <div class="col-6 position-relative">
+              <img src="../assets/cms-banner-03.jpg" alt="Banner-03" width="100%">
+              <div class="position-absolute absolute-double">
+                <div class="bg-trapezio-double mb-4">
+                  <h3 class="fw-bold fst-italic">20% Discount</h3>
+                </div>
+                <h2 class="fw-bold text-light">Dragon's Dogma<br>Video Game</h2>
+              </div>
+            </div>
+            <div class="col-6 position-relative">
+              <img src="../assets/cms-banner-04.jpg" alt="Banner-04" width="100%">
+              <div class="position-absolute absolute-double">
+                <div class="bg-trapezio-double mb-4">
+                  <h3 class="fw-bold fst-italic">30% Discount</h3>
+                </div>
+                <h2 class="fw-bold text-light">World Of Tanks<br>New Game</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Deal of the Day Section -->
       <section class="deal-of-the-day py-5">
         <div class="container text-center text-light">
@@ -136,16 +219,7 @@
       </section>
   
       <!-- Testimonial Section -->
-      <section class="testimonial-section text-light py-5">
-        <div class="container text-center">
-          <blockquote class="blockquote">
-            <p class="mb-4">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words."</p>
-            <footer class="blockquote-footer text-light">
-              Lukas Chris <cite title="Source Title">(Web Designer)</cite>
-            </footer>
-          </blockquote>
-        </div>
-      </section>
+
   
       <!-- New Game Blogs Section -->
       <section class="new-game-blogs py-5">
@@ -167,11 +241,11 @@
       <section class="brands-section text-light py-4">
         <div class="container text-center">
           <div class="d-flex justify-content-around">
-            <img src="../assets/brand-01.png" alt="Brand 1" height="40">
-            <img src="../assets/brand-02.png" alt="Brand 2" height="40">
-            <img src="../assets/brand-03.png" alt="Brand 3" height="40">
-            <img src="../assets/brand-04.png" alt="Brand 4" height="40">
-            <img src="../assets/brand-05.png" alt="Brand 5" height="40">
+            <img src="../assets/brand-01.png" alt="Brand 1" height="70">
+            <img src="../assets/brand-02.png" alt="Brand 2" height="70">
+            <img src="../assets/brand-03.png" alt="Brand 3" height="70">
+            <img src="../assets/brand-04.png" alt="Brand 4" height="70">
+            <img src="../assets/brand-05.png" alt="Brand 5" height="70">
           </div>
         </div>
       </section>
@@ -179,6 +253,8 @@
   </template>
   
   <script>
+  import AppCarousel from './AppCarousel.vue';
+
   export default {
     name: "AppMain",
     data() {
@@ -201,7 +277,11 @@
           { id: 3, title: "Nostrum Iesum Christum Lorem Ipsum is simply text", image: "/src/assets/At-vero-eos-et-accusamus-1400x878_t.jpg" }
         ],
       };
+      
     },
+    components: {
+      AppCarousel
+    }
   };
   </script>
   
@@ -217,6 +297,10 @@
   
   .features-section .bi {
     font-size: 3rem;
+  }
+
+  .features-section i:hover {
+    color: #f9aa01;
   }
   
   .category-card {
@@ -259,11 +343,53 @@
     color: #f9aa01;
   }
 
+  .bg-y-path {
+    background-color: #f9aa01;
+  }
+
+  .bg-trapezio {
+    background-color: #f9aa01;
+    width: 450px;
+    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    text-align: center;
+    margin-top: 230px;
+    margin-bottom: 50px;
+    color: black;
+  }
+
+  .bg-trapezio-double {
+    background-color: #f9aa01;
+    width: 220px;
+    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    text-align: center;
+    color: black;
+    padding-top: 5px;
+  }
+
   .absolute-text {
     bottom: 15px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 10px;
+  }
+
+  .absolute-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9aa01;
+    color: black;
+    display: none;
+  }
+
+  .category-card:hover {
+    .absolute-button {
+      display: block;
+    }
+  }
+
+  .text-over {
+    color: white;
   }
 
   .text-over:hover {
@@ -281,6 +407,12 @@
   .testimonial-section {
     background-image: url("../assets/parallax.jpg");
     background-position: center;
+    padding: 50px 0;
+  }
+
+  .absolute-double {
+    top: 60px;
+    left: 300px;
   }
   </style>
   

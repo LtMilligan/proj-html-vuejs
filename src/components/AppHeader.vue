@@ -1,7 +1,7 @@
 <template>
-    <header class="app-header">
+    <header class="app-header bg-header">
       <!-- Top Bar -->
-      <div class="top-bar bg-dark text-light py-2 border-bottom border-dark-subtle">
+      <div class="top-bar text-light py-2 border-bottom border-dark-subtle">
         <div class="container d-flex justify-content-between">
           <div>
             <a href="#" class="text-light me-3">Wishlist(0)</a>
@@ -14,7 +14,7 @@
       </div>
   
       <!-- Main Navigation Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
           <!-- Logo -->
           <a class="navbar-brand" href="#">
@@ -91,6 +91,10 @@
 
   .text-orange {
     color: #ffaa00;
+  }
+
+  .bg-header {
+    background-image: url(../assets/body-bg.jpg);
   }
   </style>
   

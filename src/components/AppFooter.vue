@@ -73,11 +73,12 @@
           <p class="mb-0">&copy; 2023 Codezeel</p>
           <!-- Payment Icons -->
            <!-- RICORDARE DI FARE LE IMMAGINI DEI PAGAMENTI DA UNICO FILE A VARI -->
-          <div>
-            <img src="" alt="American Express" height="25">
-            <img src="" alt="Discover" height="25">
-            <img src="" alt="PayPal" height="25">
-            <img src="" alt="Visa" height="25">
+          <div class="payment-brand">
+            <img src="../assets/american_express.png" alt="American Express" height="30">
+            <img src="../assets/discover.png" alt="Discover" height="30">
+            <img src="../assets/mastercard.png" alt="MasterCard" height="30">
+            <img src="../assets/paypal.png" alt="PayPal" height="30">
+            <img src="../assets/visa.png" alt="Visa" height="30">
           </div>
         </div>
       </div>
@@ -124,6 +125,10 @@
   
   a.text-light:hover {
     color: #ffaa00;
+  }
+
+  .payment-brand img {
+    margin-left: 10px;
   }
   </style>
   

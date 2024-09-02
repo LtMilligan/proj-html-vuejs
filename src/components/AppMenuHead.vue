@@ -13,6 +13,8 @@ export default {
 <style scoped>
 .nav-link {
     font-weight: bold;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   .nav-link.active,
